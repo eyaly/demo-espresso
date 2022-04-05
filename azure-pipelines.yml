@@ -10,16 +10,18 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: Install saucectl
-  displayName: 'Run a one-line script'
+- script: |
+  sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
+  saucectl --version
+  displayName: 'Install sauce '
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
 - task: CmdLine@2
   inputs:
     script: |
       echo Write your commands here
-      
       echo Hello world
