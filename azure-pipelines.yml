@@ -10,10 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: |
-  sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
-  saucectl --version
-  displayName: 'Install sauce '
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
@@ -23,5 +19,5 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      echo Write your commands here
-      echo Hello world
+      sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
+      saucectl --version
