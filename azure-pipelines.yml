@@ -11,11 +11,6 @@ pool:
 
 steps:
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
 - task: CmdLine@2
   displayName: 'Install sauceCtl'
   inputs:
@@ -26,4 +21,4 @@ steps:
   displayName: 'run espresso test'
   inputs:
     script: |
-      saucectl run --config ./.sauce/runner-ex5.yml
+      saucectl run --config ./.sauce/runner-ex9.yml
