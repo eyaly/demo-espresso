@@ -22,3 +22,6 @@ steps:
   inputs:
     script: |
       saucectl run --config ./.sauce/runner-ex9.yml
+  env:
+    SAUCE_USERNAME: $(sauceUsername) #this will store the value from 'sauceUsername' into SAUCE_USERNAME
+    SAUCE_ACCESS_KEY: $(sauceKey)
